@@ -12,8 +12,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Phoebetria
 TEMPLATE = app
 
-TRANSLATIONS =  language/phoebetria_de.ts \
-                language/phoebetria_en.ts
+TRANSLATIONS =  resources/language/phoebetria_de.ts \
+                resources/language/phoebetria_en.ts
 
 PREFIX = /usr
 BINDIR = $$PREFIX/bin
@@ -31,142 +31,141 @@ udev.path = /etc/udev/rules.d
 udev.files += 99-fancontroller.rules
 
 icon16.path = $${ICONDIR}/16x16/apps
-icon16.files += images/icons/16x16/phoebetria.png
+icon16.files += resources/images/icons/16x16/phoebetria.png
 
 icon22.path = $${ICONDIR}/22x22/apps
-icon22.files += images/icons/22x22/phoebetria.png
+icon22.files += resources/images/icons/22x22/phoebetria.png
 
 icon32.path = $${ICONDIR}/32x32/apps
-icon32.files += images/icons/32x32/phoebetria.png
+icon32.files += resources/images/icons/32x32/phoebetria.png
 
 icon48.path = $${ICONDIR}/48x48/apps
-icon48.files += images/icons/48x48/phoebetria.png
+icon48.files += resources/images/icons/48x48/phoebetria.png
 
 icon64.path = $${ICONDIR}/64x64/apps
-icon64.files += images/icons/64x64/phoebetria.png
+icon64.files += resources/images/icons/64x64/phoebetria.png
 
 icon128.path = $${ICONDIR}/128x128/apps
-icon128.files += images/icons/128x128/phoebetria.png
+icon128.files += resources/images/icons/128x128/phoebetria.png
 
 icon256.path = $${ICONDIR}/256x256/apps
-icon256.files += images/icons/256x256/phoebetria.png
+icon256.files += resources/images/icons/256x256/phoebetria.png
 
 icon512.path = $${ICONDIR}/512x512/apps
-icon512.files += images/icons/512x512/phoebetria.png
+icon512.files += resources/images/icons/512x512/phoebetria.png
 
 pixmap.path = $${DATADIR}/pixmaps
-pixmap.files += images/icons/48x48/phoebetria.png
+pixmap.files += resources/images/icons/48x48/phoebetria.png
 
+SOURCES += src/bfx-recon/fancontrollerio.cpp \
+    src/database/dbmanager.cpp \
+    src/database/maindb.cpp \
+    src/database/maindb_schema.cpp \
+    src/fan/fanchanneldata.cpp \
+    src/fan/fancontrollerdata.cpp \
+    src/fan/fanprofiles.cpp \
+    src/gui/gui_about.cpp \
+    src/gui/gui_diagnostic.cpp \
+    src/gui/gui_help.cpp \
+    src/gui/gui_mainwindow.cpp \
+    src/gui/gui_preferences.cpp \
+    src/gui/gui_profiles.cpp \
+    src/gui/gui_setmanualrpm.cpp \
+    src/gui/gui_softwareautosetup.cpp \
+    src/gui/themes.cpp \    
+    src/preferences/preferences.cpp \
+    src/qcustomplot/qcustomplot.cpp \
+    src/softwareauto/fanramp.cpp \
+    src/utils/timestampedtemperature.cpp \
+    src/utils/utils.cpp \
+    src/appinfo.cpp \
+    src/averager.cpp \
+    src/builddetails.cpp \
+    src/device-io.cpp \
+    src/dispatcher.cpp \
+    src/main.cpp \
+    src/phoebetriaapp.cpp \    
+    src/languages/languages.cpp
 
-SOURCES += main.cpp \
-    gui_mainwindow.cpp \
-    phoebetriaapp.cpp \
-    device-io.cpp \
-    fanchanneldata.cpp \
-    fancontrollerdata.cpp \
-    gui_about.cpp \
-    builddetails.cpp \
-    bfx-recon/fancontrollerio.cpp \
-    utils.cpp \
-    preferences.cpp \
-    dispatcher.cpp \
-    fanprofiles.cpp \
-    gui_preferences.cpp \
-    database/dbmanager.cpp \
-    database/maindb.cpp \
-    database/maindb_schema.cpp \
-    qcustomplot/qcustomplot.cpp \
-    gui_softwareautosetup.cpp \
-    softwareauto/fanramp.cpp \
-    gui_profiles.cpp \
-    gui_setmanualrpm.cpp \
-    themes.cpp \
-    timestampedtemperature.cpp \
-    averager.cpp \
-    appinfo.cpp \
-    languages.cpp \
-    gui_diagnostic.cpp \
-    gui_help.cpp
+HEADERS  += src/bfx-recon/bfxrecon.h \
+    src/bfx-recon/fancontrollerio.h \
+    src/database/dbmanager.h \
+    src/database/maindb.h \
+    src/database/maindb_schema.h \
+    src/fan/fanchanneldata.h \
+    src/fan/fancontrollerdata.h \
+    src/fan/fanprofiles.h \
+    src/gui/gui_about.h \
+    src/gui/gui_diagnostic.h \
+    src/gui/gui_help.h \
+    src/gui/gui_mainwindow.h \
+    src/gui/gui_preferences.h \
+    src/gui/gui_profiles.h \
+    src/gui/gui_setmanualrpm.h \
+    src/gui/gui_softwareautosetup.h \
+    src/gui/themes.h \    
+    src/preferences/preferences.h \
+    src/qcustomplot/qcustomplot.h \
+    src/softwareauto/fanramp.h \
+    src/utils/timestampedtemperature.h \
+    src/utils/utils.h \
+    src/appinfo.h \
+    src/averager.h \
+    src/builddetails.h \
+    src/device-io.h \
+    src/dispatcher.h \
+    src/main.h \
+    src/phoebetriaapp.h \
+    src/languages/languages.h
 
-HEADERS  += gui_mainwindow.h \
-    phoebetriaapp.h \
-    device-io.h \
-    fanchanneldata.h \
-    fancontrollerdata.h \
-    gui_about.h \
-    builddetails.h \
-    bfx-recon/fancontrollerio.h \
-    utils.h \
-    preferences.h \
-    bfx-recon/bfxrecon.h \
-    dispatcher.h \
-    fanprofiles.h \
-    gui_preferences.h \
-    database/dbmanager.h \
-    database/maindb.h \
-    database/maindb_schema.h \
-    qcustomplot/qcustomplot.h \
-    gui_softwareautosetup.h \
-    softwareauto/fanramp.h \
-    gui_profiles.h \
-    main.h \
-    gui_setmanualrpm.h \
-    themes.h \
-    timestampedtemperature.h \
-    averager.h \
-    appinfo.h \
-    languages.h \
-    gui_diagnostic.h \
-    gui_help.h
+FORMS    += ui/gui_about.ui \
+    ui/gui_diagnostic.ui \
+    ui/gui_help.ui \
+    ui/gui_mainwindow.ui \
+    ui/gui_preferences.ui \
+    ui/gui_profiles.ui \
+    ui/gui_setmanualrpm.ui \
+    ui/gui_softwareautosetup.ui
 
-FORMS    += gui_mainwindow.ui \
-    gui_about.ui \
-    gui_preferences.ui \
-    gui_softwareautosetup.ui \
-    gui_profiles.ui \
-    gui_setmanualrpm.ui \
-    gui_diagnostic.ui \
-    gui_help.ui
-
-RESOURCES += \
-    gui_resources.qrc \
-    gui_languages.qrc \
-    gui_help.qrc
+RESOURCES += resources/gui_help.qrc \
+    resources/gui_languages.qrc \
+    resources/gui_resources.qrc
 
 #-------------------------------------------------
 # Config for the HID API library
 #-------------------------------------------------
 
-INCLUDEPATH += hidapi/hidapi/ \
-               database/ \
-               softwareauto/ \
-               QCustomPlot/
+INCLUDEPATH += src/hidapi/hidapi/ \
+               src/database/ \
+               src/softwareauto/ \
+               src/qcstomplot/
                
-HEADERS += hidapi/hidapi/hidapi.h
+HEADERS += src/hidapi/hidapi/hidapi.h
 
 #-------------------------------------------------
 # Platform specific
 #-------------------------------------------------
 
 win32 {
-    SOURCES += hidapi/windows/hid.c
+    SOURCES += src/hidapi/windows/hid.c
     LIBS += -lsetupapi
-    RC_FILE = Windows/Phoebetria.rc
+    RC_FILE = windows/Phoebetria.rc
     CONFIG += exceptions rtti
 }
 
 unix:!macx {
     CONFIG += link_pkgconfig
     PKGCONFIG += libusb-1.0
-    SOURCES += hidapi/libusb/hid.c
+    SOURCES += src/hidapi/libusb/hid.c
     LIBS += -lusb-1.0 -ludev -lrt
 }
+
 macx {
     QMAKE_INFO_PLIST = mac/Info.plist
     #QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
     #QMAKE_MAC_SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
     LIBS += -framework CoreFoundation -framework IOKit
-    SOURCES += hidapi/mac/hid.c
+    SOURCES += src/hidapi/mac/hid.c
     ICON = mac/Phoebetria.icns
     APP_QML_FILES.files = mac/qt_menu.nib
     APP_QML_FILES.path = Contents/Resources
@@ -174,6 +173,4 @@ macx {
 }
 
 OTHER_FILES +=
-
-
 

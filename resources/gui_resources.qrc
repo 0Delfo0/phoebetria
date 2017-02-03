@@ -1,0 +1,60 @@
+<RCC>
+    <qresource lang="English" prefix="/">
+        <file>images/icon_fan.png</file>
+        <file>images/icon_fan_lite.png</file>
+        <file>images/icon_volume_off.png</file>
+        <file>images/icon_volume_off_lite.png</file>
+        <file>images/icon_volume_on.png</file>
+        <file>images/icon_volume_on_lite.png</file>
+        <file>images/icon_wrench.png</file>
+        <file>images/icon_wrench_lite.png</file>
+        <file>images/icon_hardware.png</file>
+        <file>images/icon_hardware_lite.png</file>
+        <file>images/icon_software.png</file>
+        <file>images/icon_software_lite.png</file>
+        <file>images/icon_celcius.png</file>
+        <file>images/icon_celcius_lite.png</file>
+        <file>images/icon_fahrenheit.png</file>
+        <file>images/icon_fahrenheit_lite.png</file>
+        <file>images/icon_auto.png</file>
+        <file>images/icon_auto_lite.png</file>
+        <file>images/icon_manual.png</file>
+        <file>images/icon_manual_lite.png</file>
+        <file>images/icon_close.png</file>
+        <file>images/icon_close_lite.png</file>
+        <file>images/icons_check.png</file>
+        <file>images/icons_check_checked.png</file>
+        <file>images/icon_checkbox.png</file>
+        <file>images/icon_checkbox_checked.png</file>
+        <file>images/icon_arrow_down.png</file>
+        <file>images/icon_arrow_up.png</file>
+        <file>images/pref_appearance.png</file>
+        <file>images/pref_gears.png</file>
+        <file>images/pref_sliders.png</file>
+        <file>images/icon_channels_dark_blue.png</file>
+        <file>images/icon_channels_lite_blue.png</file>
+        <file>images/icons/16x16/phoebetria.png</file>
+        <file>images/icons/16x16/phoebetria_red.png</file>
+        <file>images/icons/22x22/phoebetria.png</file>
+        <file>images/icons/22x22/phoebetria_red.png</file>
+        <file>images/icons/32x32/phoebetria.png</file>
+        <file>images/icons/32x32/phoebetria_red.png</file>
+        <file>images/icons/48x48/phoebetria.png</file>
+        <file>images/icons/48x48/phoebetria_red.png</file>
+        <file>images/icons/64x64/phoebetria.png</file>
+        <file>images/icons/64x64/phoebetria_red.png</file>
+        <file>images/icons/128x128/phoebetria.png</file>
+        <file>images/icons/128x128/phoebetria_red.png</file>
+        <file>images/checkbox.png</file>
+        <file>images/down_arrow.png</file>
+        <file>images/handle.png</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file alias="GPL3_Brief">LICENSE-BRIEF.html</file>
+        <file alias="Acknowledgments">ACKNOWLEDGEMENTS.html</file>
+    </qresource>
+    <qresource prefix="/other">
+        <file>themes/Phoebetria.qss</file>
+        <file>themes/Phoebetria-Dark.qss</file>
+    </qresource>
+</RCC>
